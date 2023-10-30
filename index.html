@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Interactive Object-level Editing in Dynamic Neural Radiance Fields via 4D Semantic Segmentation">
-  <meta name="keywords" content="NeRF, Edit, Semantic Segmentation">
+        content="Interactive Object-level Editing in Dynamic Neural Radiance Fields via 4D Semantic Distillation">
+  <meta name="keywords" content="NeRF, Edit, Semantic Distillation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>4D-Editor: Interactive Object-level Editing in Dynamic Neural Radiance Fields via 4D Semantic Segmentation</title>
+  <title>4D-Editor: Interactive Object-level Editing in Dynamic Neural Radiance Fields via 4D Semantic Distillation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -48,7 +48,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">4D-Editor: Interactive Object-level Editing in Dynamic Neural Radiance Fields via 4D Semantic Segmentation</h1>
+          <h1 class="title is-1 publication-title">4D-Editor: Interactive Object-level Editing in Dynamic Neural Radiance Fields via 4D Semantic Distillation</h1>
           <div class="is-size-5 publication-authors">
             <!-- <span class="author-block">
               <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
@@ -114,6 +114,16 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
 
+      <!-- <div class="column">
+        <div class="content">
+          <h4 align="center">Origin</h4>
+          <video id="Playground_delete_human" autoplay controls muted loop playsinline height="100%">
+            <source src="./experiments/playground_origin.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div> -->
+
       <div class="column">
         <div class="content">
           <h4 align="center">Remove woman</h4>
@@ -153,6 +163,16 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
+
+      <!-- <div class="column">
+        <div class="content">
+          <h4 align="center">Origin</h4>
+          <video id="balloon2_origin" autoplay controls muted loop playsinline height="100%">
+            <source src="./experiments/balloon2_origin.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div> -->
 
       <div class="column">
         <div class="content">
@@ -201,13 +221,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This paper targets interactive object-level editing(e.g., deletion, recoloring, transformation, composition) in dynamic scenes.
-            Recently, some methods aiming for flexible editing static scenes represented by neural radiance field (NeRF) have shown impressive synthesis quality, while similar capabilities in time-variant dynamic scenes remain limited.
-            To solve this problem, we propose 4D-Editor, an interactive semantic-driven editing framework, allowing editing multiple objects in dynamic NeRF based on user strokes on a single frame.
-            Our dynamic scene representation is built upon hybrid semantic feature fields so that the spatial-temporal consistency can be maintained after editing.
-            In addition, we design recursive selection refinement that significantly boosts segmentation accuracy in a dynamic NeRF to aid the editing process.
-            Moreover, we develop multi-view reprojection inpainting to fill holes caused by incomplete scene capture after editing.
-            Extensive experiments and editing examples on real-world demonstrate that 4D-Editor achieves photo-realistic dynamic NeRF editing.
+            This paper targets interactive object-level editing (e.g., deletion, recoloring, transformation, composition) in dynamic scenes.
+Recently, some methods aiming for flexible editing static scenes represented by neural radiance field (NeRF) have shown impressive synthesis quality, while similar capabilities in time-variant dynamic scenes remain limited.
+To solve this problem, we propose 4D-Editor, an interactive semantic-driven editing framework, allowing editing multiple objects in a dynamic NeRF with user strokes on a single frame.
+We propose an extension to the original dynamic NeRF by incorporating a hybrid semantic feature distillation to maintain spatial-temporal consistency after editing.
+In addition, we design Recursive Selection Refinement that significantly boosts object segmentation accuracy within a dynamic NeRF to aid the editing process.
+Moreover, we develop Multi-view Reprojection Inpainting to fill holes caused by incomplete scene capture after editing.
+Extensive experiments and editing examples on real-world demonstrate that 4D-Editor achieves photo-realistic editing on dynamic NeRFs.
           </p>
         </div>
       </div>
@@ -224,6 +244,38 @@
     </div>
   </div>
 </section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <h4 align="center">Origin</h4>
+          <video id="stroller_orign" autoplay controls muted loop playsinline style="width: 100%; height: 100%; object-fit: fill">
+            <source src="./experiments/stroller_origin.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <h4 align="center">Remove adult</h4>
+          <video id="stroller_delete" autoplay controls muted loop playsinline style="width: 100%; height: 100%; object-fit: fill">
+            <source src="./experiments/stroller_delete.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+<br><br>
 
 
 <section class="hero teaser">
@@ -258,37 +310,6 @@
 
 <br><br>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-
-      <div class="column">
-        <div class="content">
-          <h4 align="center">Origin</h4>
-          <video id="stroller_orign" autoplay controls muted loop playsinline style="width: 100%; height: 100%; object-fit: fill">
-            <source src="./experiments/stroller_origin.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="content">
-          <h4 align="center">Remove adult</h4>
-          <video id="stroller_delete" autoplay controls muted loop playsinline style="width: 100%; height: 100%; object-fit: fill">
-            <source src="./experiments/stroller_delete.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-
-
-    </div>
-  </div>
-</section>
-
-<br><br>
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -306,7 +327,7 @@
 
       <div class="column">
         <div class="content">
-          <h4 align="center">Remove car + recolor sign</h4>
+          <h4 align="center">Remove car + Recolor sign</h4>
           <video id="car_delete_recolor" autoplay controls muted loop playsinline style="width: 100%; height: 100%; object-fit: fill">
             <source src="./experiments/car_delete_recolor.mp4"
                     type="video/mp4">
@@ -323,17 +344,17 @@
 
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <!-- <pre><code>@article{park2021nerfies,
+    <pre><code>@article{park2021nerfies,
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {4D-Editor: Interactive Object-level Editing in Dynamic Neural Radiance Fields via 4D Semantic Segmentation},
+  title     = {4D-Editor: Interactive Object-level Editing in Dynamic Neural Radiance Fields via 4D Semantic Distillation},
   journal   = {ICCV},
   year      = {2021},
-}</code></pre> -->
+}</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
