@@ -222,12 +222,12 @@
         <div class="content has-text-justified">
           <p>
             This paper targets interactive object-level editing (e.g., deletion, recoloring, transformation, composition) in dynamic scenes.
-Recently, some methods aiming for flexible editing static scenes represented by neural radiance field (NeRF) have shown impressive synthesis quality, while similar capabilities in time-variant dynamic scenes remain limited.
-To solve this problem, we propose 4D-Editor, an interactive semantic-driven editing framework, allowing editing multiple objects in a dynamic NeRF with user strokes on a single frame.
-We propose an extension to the original dynamic NeRF by incorporating a hybrid semantic feature distillation to maintain spatial-temporal consistency after editing.
-In addition, we design Recursive Selection Refinement that significantly boosts object segmentation accuracy within a dynamic NeRF to aid the editing process.
-Moreover, we develop Multi-view Reprojection Inpainting to fill holes caused by incomplete scene capture after editing.
-Extensive experiments and editing examples on real-world demonstrate that 4D-Editor achieves photo-realistic editing on dynamic NeRFs.
+            Recently, some methods aiming for flexible editing static scenes represented by neural radiance field (NeRF) have shown impressive synthesis quality, while similar capabilities in time-variant dynamic scenes remain limited.
+            To solve this problem, we propose 4D-Editor, an interactive semantic-driven editing framework, allowing editing multiple objects in a dynamic NeRF with user strokes on a single frame.
+            We propose an extension to the original dynamic NeRF by incorporating a hybrid semantic feature distillation to maintain spatial-temporal consistency after editing.
+            In addition, we design Recursive Selection Refinement that significantly boosts object segmentation accuracy within a dynamic NeRF to aid the editing process.
+            Moreover, we develop Multi-view Reprojection Inpainting to fill holes caused by incomplete scene capture after editing.
+            Extensive experiments and editing examples on real-world demonstrate that 4D-Editor achieves photo-realistic editing on dynamic NeRFs.
           </p>
         </div>
       </div>
@@ -244,6 +244,19 @@ Extensive experiments and editing examples on real-world demonstrate that 4D-Edi
     </div>
   </div>
 </section>
+
+<br>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Object-level Editing on Multiple Objects</h2>
+    </div>
+  </div>
+</section>
+
+
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -334,8 +347,45 @@ Extensive experiments and editing examples on real-world demonstrate that 4D-Edi
           </video>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
+<br><br>
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <h4 align="center">Composite</h4>
+          <video id="composite_balloon2_jumping" autoplay controls muted loop playsinline height="100%">
+            <source src="./experiments/composite_balloon2_jumping.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <h4 align="center">Composite</h4>
+          <video id="composite_balloon2_playground" autoplay controls muted loop playsinline height="100%">
+            <source src="./experiments/composite_balloon2_playground.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <h4 align="center">Timing Reversal</h4>
+          <video id="reverse" autoplay controls muted loop playsinline height="100%">
+            <source src="./experiments/reverse.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
 
     </div>
   </div>
